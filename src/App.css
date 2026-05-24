@@ -1,0 +1,158 @@
+:root {
+  --bg: #fff9fb;
+  --bg2: #ffeaf2;
+  --ink: #3a2b33;
+  --inkSoft: #6a4d5a;
+  --accent: #ff6fae;
+  --accent2: #ffb7d2;
+  --card: rgba(255, 255, 255, 0.74);
+  --shadow: rgba(58, 43, 51, 0.18);
+}
+
+.Page {
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2)),
+    radial-gradient(1200px 700px at 50% 0%, var(--bg2), var(--bg)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 111, 174, 0.06) 0px,
+      rgba(255, 111, 174, 0.06) 2px,
+      rgba(255, 255, 255, 0) 2px,
+      rgba(255, 255, 255, 0) 6px
+    );
+  image-rendering: pixelated;
+}
+
+.Stage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px 18px;
+}
+
+.Card {
+  width: min(780px, 92vw);
+  padding: 34px 26px 28px;
+  background: var(--card);
+  border-radius: 18px;
+  border: 2px solid rgba(255, 183, 210, 0.65);
+  box-shadow:
+    0 18px 40px var(--shadow),
+    0 0 0 6px rgba(255, 183, 210, 0.18);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.Card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(58, 43, 51, 0.06) 0px,
+      rgba(58, 43, 51, 0.06) 1px,
+      rgba(255, 255, 255, 0) 1px,
+      rgba(255, 255, 255, 0) 4px
+    );
+  mix-blend-mode: multiply;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.Title {
+  margin: 0;
+  font-size: clamp(34px, 5.2vw, 56px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow:
+    2px 2px 0 rgba(255, 183, 210, 0.55),
+    4px 4px 0 rgba(255, 111, 174, 0.15);
+}
+
+.Tagline {
+  margin: 10px 0 22px;
+  color: var(--inkSoft);
+  font-size: clamp(14px, 1.8vw, 18px);
+}
+
+.DownloadButton {
+  display: inline-grid;
+  place-items: center;
+  width: min(420px, 86vw);
+  height: 86px;
+  margin: 14px auto 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #20161d;
+  background:
+    linear-gradient(180deg, #ffffff, #ffe4ef 55%, #ffd1e4),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.65) 0px,
+      rgba(255, 255, 255, 0.65) 3px,
+      rgba(255, 255, 255, 0) 3px,
+      rgba(255, 255, 255, 0) 8px
+    );
+  border-radius: 16px;
+  border: 3px solid rgba(255, 111, 174, 0.6);
+  box-shadow:
+    0 12px 0 rgba(255, 111, 174, 0.18),
+    0 22px 38px rgba(58, 43, 51, 0.18);
+  transform: translateY(0);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.DownloadButton::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 12px;
+  outline: 2px dashed rgba(255, 111, 174, 0.35);
+  outline-offset: -6px;
+  pointer-events: none;
+}
+
+.DownloadButton:hover {
+  filter: saturate(1.02);
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 0 rgba(255, 111, 174, 0.18),
+    0 26px 48px rgba(58, 43, 51, 0.2);
+}
+
+.DownloadButton:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 8px 0 rgba(255, 111, 174, 0.18),
+    0 18px 34px rgba(58, 43, 51, 0.18);
+}
+
+.DownloadButton:focus-visible {
+  outline: 4px solid rgba(255, 111, 174, 0.6);
+  outline-offset: 6px;
+}
+
+.Footnote {
+  margin: 10px 0 0;
+  color: rgba(58, 43, 51, 0.76);
+  font-size: 13px;
+}
+
+.Mono {
+  font-family: ui-monospace, "Cascadia Mono", "SFMono-Regular", Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .DownloadButton {
+    transition: none;
+  }
+}
