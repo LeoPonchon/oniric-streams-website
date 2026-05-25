@@ -100,7 +100,7 @@ const translations = {
       kicker: "Ferme • Tour • Rebirth",
       title: "Oniric Streams",
       lead:
-        "Fais grandir ta ferme et grimpe la tour au centre du village. À chaque cycle, les Oniric Streams te ramènent au début… avec quelque chose en plus.",
+        "Fais grandir ta ferme et grimpe la tour au centre du village. À chaque cycle, les Flux Oniriques te ramènent au début… avec quelque chose en plus.",
       download: "Télécharger",
       seeShots: "Voir des captures",
     },
