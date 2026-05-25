@@ -10,16 +10,39 @@ export default function App() {
   const t = (key) => translate(lang, key);
 
   const stars = useMemo(() => {
-    const count = 70;
-    return Array.from({ length: count }, (_, idx) => {
+    const count = 50;
+    const minRadiusPct = 3.2; // minimum spacing, in viewport %
+    const maxAttempts = count * 50;
+
+    const out = [];
+    const minR2 = minRadiusPct * minRadiusPct;
+
+    let attempts = 0;
+    while (out.length < count && attempts < maxAttempts) {
+      attempts += 1;
       const x = Math.random() * 100;
-      const y = Math.random() * 55;
-      const size = 1 + Math.random() * 2.2;
+      const y = Math.random() * 100;
+
+      let ok = true;
+      for (let i = 0; i < out.length; i += 1) {
+        const dx = out[i].x - x;
+        const dy = out[i].y - y;
+        if (dx * dx + dy * dy < minR2) {
+          ok = false;
+          break;
+        }
+      }
+      if (!ok) continue;
+
+      const idx = out.length;
+      const size = 2.6 + Math.random() * 6.2;
       const twinkle = 2.6 + Math.random() * 3.8;
       const delay = Math.random() * 3.5;
-      const alpha = 0.35 + Math.random() * 0.65;
-      return { id: `s${idx}`, x, y, size, twinkle, delay, alpha };
-    });
+      const alpha = 0.72 + Math.random() * 0.22;
+      out.push({ id: `s${idx}`, x, y, size, twinkle, delay, alpha });
+    }
+
+    return out;
   }, []);
 
   const nav = [
