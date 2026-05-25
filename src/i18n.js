@@ -80,6 +80,30 @@ const translations = {
       sections: [
         { heading: "[Unreleased]", blocks: [{ title: null, items: ["Nothing yet."] }] },
         {
+          heading: "[1.0.2] - 2026-05-25",
+          blocks: [
+            {
+              title: "UI / Shop",
+              items: ["New shop entries and improvements (including seasonal deals)."],
+            },
+            {
+              title: "Shipping Bin",
+              items: ["Improved selling via the Shipping Bin (more sellable items, with configured prices)."],
+            },
+            {
+              title: "Farming",
+              items: [
+                "Withering tuned: crops now wither on season change.",
+                "Perennial crops: production adjusted for better consistency.",
+              ],
+            },
+            {
+              title: "Items / Animations",
+              items: ["Visual/animation tweaks for held items."],
+            },
+          ],
+        },
+        {
           heading: "[Since 1.0.0] - 2026-05-23 → 2026-05-25",
           blocks: [
             { title: "UI / Shop", items: ["Updated shop visuals and layouts.", "New UI elements.", "Shop scene adjustments."] },
@@ -97,14 +121,13 @@ const translations = {
                 "Animations.",
               ],
             },
-            { title: "Changed", items: ["Website iterations and move to another repo."] },
           ],
         },
         {
           heading: "[1.0.0] - 2026-05-23",
           blocks: [
             { title: "Added", items: ["Core UI (fundamentals).", "Character customization menu.", "Stamina."] },
-            { title: "Fixed / Improved", items: ["Menu UI.", "Inventory.", "Startup flow.", "Tilemaps.", "Chests."] },
+            { title: "Fixed", items: ["Menu UI.", "Inventory.", "Startup flow.", "Tilemaps.", "Chests."] },
           ],
         },
       ],
@@ -201,6 +224,30 @@ const translations = {
       sections: [
         { heading: "[Non publié]", blocks: [{ title: null, items: ["Rien pour le moment."] }] },
         {
+          heading: "[1.0.2] - 2026-05-25",
+          blocks: [
+            {
+              title: "UI / Shop",
+              items: ["Nouvelles entrées et améliorations du shop (incluant des offres saisonnières)."],
+            },
+            {
+              title: "Shipping Bin",
+              items: ["Amélioration de la vente via la Shipping Bin (plus d’objets vendables, avec prix configurés)."],
+            },
+            {
+              title: "Farming",
+              items: [
+                "Flétrissement ajusté : les cultures flétrissent lors d’un changement de saison.",
+                "Cultures pérennes : production ajustée pour être plus cohérente.",
+              ],
+            },
+            {
+              title: "Items / Animations",
+              items: ["Ajustements visuels/animations des objets en main."],
+            },
+          ],
+        },
+        {
           heading: "[Depuis 1.0.0] - 2026-05-23 → 2026-05-25",
           blocks: [
             {
@@ -221,14 +268,13 @@ const translations = {
                 "Animations.",
               ],
             },
-            { title: "Modifié", items: ["Site web : itérations + déplacement vers un autre repo."] },
           ],
         },
         {
           heading: "[1.0.0] - 2026-05-23",
           blocks: [
             { title: "Ajouté", items: ["UI “fundamentals” fonctionnelle.", "Menu de customisation du personnage.", "Stamina."] },
-            { title: "Corrigé / Amélioré", items: ["UI du menu.", "Inventaire.", "Démarrage.", "Tilemaps.", "Coffres."] },
+            { title: "Corrigé", items: ["UI du menu.", "Inventaire.", "Démarrage.", "Tilemaps.", "Coffres."] },
           ],
         },
       ],
