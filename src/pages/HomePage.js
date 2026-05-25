@@ -1,16 +1,23 @@
 import { translations } from "../i18n";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 function withPublicUrl(path) {
   return `${process.env.PUBLIC_URL}${path}`;
 }
 
 const shots = [
-  { src: "/media/screen-01.svg", span: "Span6" },
-  { src: "/media/screen-02.svg", span: "Span6" },
-  { src: "/media/screen-03.svg", span: "Span4" },
-  { src: "/media/screen-04.svg", span: "Span8" },
-  { src: "/media/screen-05.svg", span: "Span6" },
-  { src: "/media/screen-06.svg", span: "Span6" },
+  "/media/Main menu.png",
+  "/media/Just Started.png",
+  "/media/Creating Farm.png",
+  "/media/Character customization 1.png",
+  "/media/Character customization 2.png",
+  "/media/Planting Grape.png",
+  "/media/Watching Over Crops.png",
+  "/media/Picking Grapes.png",
+  "/media/Selling Grapes.png",
+  "/media/Opening Chest.png",
+  "/media/Browsing Shop.png",
+  "/media/Going To Sleep.png",
 ];
 
 const team = [
@@ -40,6 +47,20 @@ const team = [
 export default function HomePage({ lang = "en" }) {
   const copy = translations[lang] ?? translations.en;
   const installerHref = `${process.env.PUBLIC_URL}/Oniric%20Streams_Setup_v1.0.0.exe`;
+  const [shotIndex, setShotIndex] = useState(0);
+  const slidesRef = useRef([]);
+  const shotCount = shots.length;
+
+  const clampedIndex = useMemo(() => {
+    if (shotCount === 0) return 0;
+    return ((shotIndex % shotCount) + shotCount) % shotCount;
+  }, [shotIndex, shotCount]);
+
+  useEffect(() => {
+    const node = slidesRef.current[clampedIndex];
+    if (!node) return;
+    node.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+  }, [clampedIndex]);
 
   return (
     <div className="Page" id="top">
@@ -114,18 +135,57 @@ export default function HomePage({ lang = "en" }) {
             <p className="Lead">{copy.media.lead}</p>
           </div>
 
-          <div className="Gallery" aria-label={copy.media.galleryAria}>
-            {shots.map((s, idx) => (
-              <figure key={s.src} className={`Shot ${s.span}`}>
-                <img
-                  className="ShotImg"
-                  src={withPublicUrl(s.src)}
-                  alt={copy.media.shotsAlt(idx + 1)}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-            ))}
+          <div className="Carousel" role="region" aria-roledescription="carousel" aria-label={copy.media.galleryAria}>
+            <div className="CarouselControls" aria-label={copy.media.galleryAria}>
+              <button
+                type="button"
+                className="Button ButtonGhost ButtonSmall"
+                onClick={() => setShotIndex((i) => i - 1)}
+                aria-label={lang === "fr" ? "Image précédente" : "Previous image"}
+              >
+                {lang === "fr" ? "Précédent" : "Prev"}
+              </button>
+              <div className="CarouselCounter" aria-label={lang === "fr" ? "Index image" : "Image index"}>
+                {clampedIndex + 1}/{shotCount}
+              </div>
+              <button
+                type="button"
+                className="Button ButtonGhost ButtonSmall"
+                onClick={() => setShotIndex((i) => i + 1)}
+                aria-label={lang === "fr" ? "Image suivante" : "Next image"}
+              >
+                {lang === "fr" ? "Suivant" : "Next"}
+              </button>
+            </div>
+
+            <div
+              className="CarouselViewport"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "ArrowLeft") setShotIndex((i) => i - 1);
+                if (e.key === "ArrowRight") setShotIndex((i) => i + 1);
+              }}
+            >
+              {shots.map((src, idx) => (
+                <figure
+                  key={src}
+                  className="CarouselSlide"
+                  aria-label={copy.media.shotsAlt(idx + 1)}
+                  aria-current={idx === clampedIndex ? "true" : undefined}
+                  ref={(node) => {
+                    slidesRef.current[idx] = node;
+                  }}
+                >
+                  <img
+                    className="CarouselImg"
+                    src={withPublicUrl(src)}
+                    alt={copy.media.shotsAlt(idx + 1)}
+                    loading={Math.abs(idx - clampedIndex) <= 1 ? "eager" : "lazy"}
+                    decoding="async"
+                  />
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>

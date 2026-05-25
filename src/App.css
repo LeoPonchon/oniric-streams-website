@@ -668,6 +668,61 @@
   grid-column: span 8;
 }
 
+/* Carousel */
+.Carousel {
+  border-radius: var(--rLg);
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.42);
+  overflow: hidden;
+}
+
+.CarouselControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  border-bottom: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.CarouselCounter {
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(17, 24, 39, 0.76);
+}
+
+.CarouselViewport {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+}
+
+.CarouselViewport:focus-visible {
+  box-shadow: inset 0 0 0 2px rgba(43, 108, 176, 0.38);
+}
+
+.CarouselSlide {
+  margin: 0;
+  scroll-snap-align: center;
+}
+
+.CarouselImg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  image-rendering: pixelated;
+}
+
 /* Footer */
 .Footer {
   margin-top: 32px;
