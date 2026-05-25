@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    pageTitle: "Oniric Streams  Official website",
+    pageTitle: "Oniric Streams — Official website",
     langLabel: "Language",
     langSwitch: "FR",
     skipToContent: "Skip to content",
@@ -25,10 +25,10 @@ const translations = {
     topCta: {
       aria: "Download",
       actionsAria: "Actions",
-      kicker: "Farm  Tower  Rebirth",
+      kicker: "Farm • Tower • Rebirth",
       title: "Oniric Streams",
       lead:
-        "Grow your farm and climb the tower at the heart of the village. Each cycle, the Oniric Streams bring you back with something more.",
+        "Grow your farm and climb the tower at the heart of the village. Each cycle, the Oniric Streams bring you back… with something more.",
       download: "Download",
       seeShots: "See screenshots",
     },
@@ -36,17 +36,17 @@ const translations = {
       aria: "Overview",
       aboutTitle: "About",
       aboutLead:
-        "Oniric Streams is a pixel-art farming game with a stronger focus on combat. At the center of the village stands an impossible tower: your parents died inside, and you inherit their farm once youre old enough to restore it.",
+        "Oniric Streams is a pixel-art farming game with a stronger focus on combat. At the center of the village stands an impossible tower: your parents died inside, and you inherit their farm once you’re old enough to restore it.",
       storyTitle: "Story",
       storyLead:
-        "An orphan at the edge of a quiet village, you inherit your parents farmleft behind after they died in the tower at its center. As the fields thrive, you push higher into the towers dreamlike currents, chasing the truth they never brought back. Reach the summit, and a wish awaits but each fall sends you back to the start, changed.",
+        "An orphan at the edge of a quiet village, you inherit your parents’ farm—left behind after they died in the tower at its center. As the fields thrive, you push higher into the tower’s dreamlike currents, chasing the truth they never brought back. Reach the summit, and a wish awaits… but each fall sends you back to the start, changed.",
       credits: "Credits",
       pressKit: "Press kit",
     },
     features: {
       aria: "Features",
       title: "Features",
-      lead: "A quick look at the games pillars.",
+      lead: "A quick look at the game’s pillars.",
       listAria: "Feature list",
       items: [
         "Build your dream farm: crops, animals, upgrades, and cozy routines.",
@@ -80,7 +80,7 @@ const translations = {
       sections: [
         { heading: "[Unreleased]", blocks: [{ title: null, items: ["Nothing yet."] }] },
         {
-          heading: "[Since 1.0.0] - 2026-05-23  2026-05-25",
+          heading: "[Since 1.0.0] - 2026-05-23 → 2026-05-25",
           blocks: [
             { title: "UI / Shop", items: ["Updated shop visuals and layouts.", "New UI elements.", "Shop scene adjustments."] },
             { title: "Added", items: ["Footstep SFX.", "Settings panel."] },
@@ -116,24 +116,24 @@ const translations = {
       listAria: "Updates list",
       items: [
         { title: "Windows build", body: "Public installer available: Oniric Streams_Setup_v1.0.0.exe" },
-        { title: "Scope", body: "Small team, focused on a tight loop: farm  tower  rebirth." },
+        { title: "Scope", body: "Small team, focused on a tight loop: farm → tower → rebirth." },
         { title: "Feedback", body: "If you spot a bug or have balance thoughts, ping the team on GitHub (links below)." },
       ],
     },
   },
   fr: {
-    pageTitle: "Oniric Streams  Site officiel",
+    pageTitle: "Oniric Streams — Site officiel",
     langLabel: "Langue",
     langSwitch: "EN",
     skipToContent: "Aller au contenu",
-    brandAria: "Aller  laccueil",
-    tagline: "Entre rves, rcoltes et renaissances.",
+    brandAria: "Aller à l’accueil",
+    tagline: "Entre rêves, récoltes et renaissances.",
     nav: {
       home: "Accueil",
-      media: "Mdias",
-      credits: "Crdits",
+      media: "Médias",
+      credits: "Crédits",
     },
-    footerRights: "Tous droits rservs.",
+    footerRights: "Tous droits réservés.",
     a11y: {
       site: "Site Oniric Streams",
       mainNav: "Navigation principale",
@@ -145,52 +145,52 @@ const translations = {
       closeMenu: "Fermer le menu",
     },
     topCta: {
-      aria: "Tlchargement",
-      kicker: "Ferme  Tour  Rebirth",
+      aria: "Téléchargement",
+      kicker: "Ferme • Tour • Rebirth",
       title: "Oniric Streams",
       lead:
-        "Fais grandir ta ferme et grimpe la tour au centre du village.  chaque cycle, les Flux Oniriques te ramnent au dbut avec quelque chose en plus.",
-      download: "Tlcharger",
+        "Fais grandir ta ferme et grimpe la tour au centre du village. À chaque cycle, les Flux Oniriques te ramènent au début… avec quelque chose en plus.",
+      download: "Télécharger",
       seeShots: "Voir des captures",
     },
     about: {
-      aria: "Prsentation",
-      aboutTitle: " propos",
+      aria: "Présentation",
+      aboutTitle: "À propos",
       aboutLead:
-        "Oniric Streams est un jeu de ferme en pixel art, avec un accent plus marqu sur le combat. Au centre du village se dresse une tour impossible : tes parents y ont trouv la mort, et tu hrites de leur ferme une fois assez grand pour la relever.",
+        "Oniric Streams est un jeu de ferme en pixel art, avec un accent plus marqué sur le combat. Au centre du village se dresse une tour impossible : tes parents y ont trouvé la mort, et tu hérites de leur ferme une fois assez grand pour la relever.",
       storyTitle: "Histoire",
       storyLead:
-        "Orphelin au bord dun village paisible, tu rcupres la ferme de tes parents, disparus dans la tour au centre des terres.  mesure que ton domaine reprend vie, tu grimpes dans les courants oniriques de la tour,  la recherche de ce quils ont laiss derrire eux. Au sommet, un vu tattend mais chaque chute te renvoie au dbut, un peu diffrent.",
-      credits: "Crdits",
+        "Orphelin au bord d’un village paisible, tu récupères la ferme de tes parents, disparus dans la tour au centre des terres. À mesure que ton domaine reprend vie, tu grimpes dans les courants oniriques de la tour, à la recherche de ce qu’ils ont laissé derrière eux. Au sommet, un vœu t’attend… mais chaque chute te renvoie au début, un peu différent.",
+      credits: "Crédits",
       pressKit: "Press kit",
     },
     features: {
-      aria: "Fonctionnalits",
-      title: "Fonctionnalits",
-      lead: "Un aperu du ton et des piliers du jeu.",
-      listAria: "Liste des fonctionnalits",
+      aria: "Fonctionnalités",
+      title: "Fonctionnalités",
+      lead: "Un aperçu du ton et des piliers du jeu.",
+      listAria: "Liste des fonctionnalités",
       items: [
-        "Construis la ferme de tes rves : cultures, animaux, amliorations, routine cozy.",
-        "Explore la Tour : tages, secrets, et boss marquants.",
-        "Une progression axe combat : quipement, comptences et builds varis.",
-        "Une boucle satisfaisante : cultive, prends le temps dune vie paisible  la ferme et au village, puis gravis la Tour, l o tattendent puissance et ressources rares.",
+        "Construis la ferme de tes rêves : cultures, animaux, améliorations, routine cozy.",
+        "Explore la Tour : étages, secrets, et boss marquants.",
+        "Une progression axée combat : équipement, compétences et builds variés.",
+        "Une boucle satisfaisante : cultive, prends le temps d’une vie paisible à la ferme et au village, puis gravis la Tour, là où t’attendent puissance et ressources rares.",
         "Rebirth : recommence plus fort, avec des bonus permanents et de nouveaux indices.",
-        "Un village vivant : relations, vnements saisonniers et histoires caches.",
+        "Un village vivant : relations, événements saisonniers et histoires cachées.",
       ],
     },
     media: {
-      aria: "Mdias",
+      aria: "Médias",
       kicker: "Galerie",
-      title: "Mdias",
-      lead: "Captures dcran et visuels du projet.",
+      title: "Médias",
+      lead: "Captures d’écran et visuels du projet.",
       galleryAria: "Galerie",
-      shotsAlt: (n) => `Capture dcran ${n}`,
+      shotsAlt: (n) => `Capture d’écran ${n}`,
     },
     credits: {
-      aria: "Crdits",
-      kicker: "Crdits",
-      title: "quipe",
-      lead: "Les personnes derrire Oniric Streams.",
+      aria: "Crédits",
+      kicker: "Crédits",
+      title: "Équipe",
+      lead: "Les personnes derrière Oniric Streams.",
       contributors: "Contributeurs",
       listAria: "Liste des contributeurs",
     },
@@ -201,7 +201,7 @@ const translations = {
       sections: [
         { heading: "[Non publié]", blocks: [{ title: null, items: ["Rien pour le moment."] }] },
         {
-          heading: "[Depuis 1.0.0] - 2026-05-23  2026-05-25",
+          heading: "[Depuis 1.0.0] - 2026-05-23 → 2026-05-25",
           blocks: [
             {
               title: "UI / Shop",
@@ -227,7 +227,7 @@ const translations = {
         {
           heading: "[1.0.0] - 2026-05-23",
           blocks: [
-            { title: "Ajouté", items: ["UI fundamentals fonctionnelle.", "Menu de customisation du personnage.", "Stamina."] },
+            { title: "Ajouté", items: ["UI “fundamentals” fonctionnelle.", "Menu de customisation du personnage.", "Stamina."] },
             { title: "Corrigé / Amélioré", items: ["UI du menu.", "Inventaire.", "Démarrage.", "Tilemaps.", "Coffres."] },
           ],
         },
@@ -236,12 +236,12 @@ const translations = {
     updates: {
       aria: "Actus",
       title: "Actus",
-      lead: "Quelques notes concrtes (a fait tout de suite moins template).",
+      lead: "Quelques notes concrètes (ça fait tout de suite moins “template”).",
       listAria: "Liste des actus",
       items: [
         { title: "Build Windows", body: "Installer public disponible : Oniric Streams_Setup_v1.0.0.exe" },
-        { title: "Cadre", body: "Petite quipe, focus sur une boucle simple : ferme  tour  rebirth." },
-        { title: "Retours", body: "Bug / quilibrage / ressenti : cris-nous via GitHub (liens en bas)." },
+        { title: "Cadre", body: "Petite équipe, focus sur une boucle simple : ferme → tour → rebirth." },
+        { title: "Retours", body: "Bug / équilibrage / ressenti : écris-nous via GitHub (liens en bas)." },
       ],
     },
   },
