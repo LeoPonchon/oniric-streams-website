@@ -94,7 +94,6 @@ export default function App() {
       <header className="Topbar" aria-label={t("a11y.mainNav")}>
         <div className="Container TopbarInner">
           <Link className="Brand" to="/" aria-label={t("brandAria")} onClick={() => setNavOpen(false)}>
-            <span className="BrandMark" aria-hidden="true" />
             <span className="BrandText">
               <span className="BrandName">Oniric Streams</span>
               <span className="BrandMeta">{t("tagline")}</span>

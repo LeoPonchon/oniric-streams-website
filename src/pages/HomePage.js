@@ -53,15 +53,18 @@ export default function HomePage({ lang = "en" }) {
               <p className="Lead" style={{ marginTop: 8 }}>
                 {copy.topCta.lead}
               </p>
+              <div className="HomeTopCtaActions" aria-label="Actions" style={{ justifyContent: "flex-start" }}>
+                <a className="Button ButtonPrimary" href={installerHref} download>
+                  {copy.topCta.download}
+                </a>
+                <a className="Button ButtonGhost" href="#media">
+                  {copy.topCta.seeShots}
+                </a>
+              </div>
             </div>
 
-            <div className="HomeTopCtaActions" aria-label="Actions">
-              <a className="Button ButtonPrimary" href={installerHref} download>
-                {copy.topCta.download}
-              </a>
-              <a className="Button ButtonGhost" href="#media">
-                {copy.topCta.seeShots}
-              </a>
+            <div className="HeroArt" aria-hidden="true">
+              <img className="HeroArtImg" src={withPublicUrl("/media/hero-sprite.svg")} alt="" decoding="async" />
             </div>
           </div>
         </div>
@@ -93,7 +96,6 @@ export default function HomePage({ lang = "en" }) {
             <div className="CardInner">
               <div className="PageHeader" style={{ margin: 0 }}>
                 <h2 className="PageTitle">{copy.features.title}</h2>
-                <p className="Lead">{copy.features.lead}</p>
               </div>
               <div className="Divider" />
               <ul className="FeatureList" aria-label={copy.features.listAria}>
@@ -159,6 +161,117 @@ export default function HomePage({ lang = "en" }) {
                     </div>
                   </li>
                 ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="changelogs" aria-label={copy.changelog.aria}>
+        <div className="Container">
+          <div className="PageHeader" style={{ marginTop: 18 }}>
+            <h2 className="PageTitle">{copy.changelog.title}</h2>
+          </div>
+
+          <div className="Card" aria-label={copy.changelog.aria}>
+            <div className="CardInner">
+              <p className="Lead" style={{ marginTop: 0 }}>
+                Tous les changements notables du projet sont listés ici.
+              </p>
+
+              <div className="Divider" />
+
+              <h3 className="CardTitle" style={{ marginBottom: 8 }}>
+                [Non publié]
+              </h3>
+              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
+                <li>Rien pour le moment.</li>
+              </ul>
+
+              <div className="Divider" />
+
+              <h3 className="CardTitle" style={{ marginBottom: 8 }}>
+                [Depuis 1.0.0] - 2026-05-23 → 2026-05-25
+              </h3>
+
+              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
+                UI / Shop
+              </h4>
+              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
+                <li>
+                  Mise à jour des visuels et layouts du shop : <code>shop.png</code>, <code>shop_slot.prefab</code>,{" "}
+                  <code>shop_slot_selector.png</code>.
+                </li>
+                <li>
+                  Ajout de nouveaux sprites : <code>locker.png</code>, <code>name_slot.png</code>,{" "}
+                  <code>normal_slot.png</code>.
+                </li>
+                <li>
+                  Suppression de l’ancien sprite <code>shop_slot.png</code>.
+                </li>
+                <li>
+                  Ajustements de scène liés au shop : <code>Assets/_Project/Scenes/Production/SampleScene.unity</code>.
+                </li>
+              </ul>
+
+              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
+                Ajouté
+              </h4>
+              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
+                <li>Bruitages de pas (footsteps).</li>
+                <li>Panel de paramètres (settings panel).</li>
+              </ul>
+
+              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
+                Corrigé
+              </h4>
+              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
+                <li>UI/typo : font.</li>
+                <li>Interactions : arbres qui réapparaissent + joueur bloqué après certaines interactions.</li>
+                <li>
+                  Sauvegarde/économie : cultures (crops) non sauvegardées, or (gold) qui ne se met pas à jour.
+                </li>
+                <li>Shop : régressions après retour au menu principal / hotbar / menu in-game.</li>
+                <li>Coffres : slots non visibles, transferts joueur ↔ coffre, divers soucis.</li>
+                <li>Chargement du personnage.</li>
+                <li>Lit (bed) et shipping bin.</li>
+                <li>Customisation compatible avec des tilesheets supplémentaires.</li>
+                <li>Animations : idle up (back hair).</li>
+              </ul>
+
+              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
+                Modifié
+              </h4>
+              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
+                <li>Site web : itérations + déplacement vers un autre repo.</li>
+              </ul>
+
+              <div className="Divider" />
+
+              <h3 className="CardTitle" style={{ marginBottom: 8 }}>
+                [1.0.0] - 2026-05-23
+              </h3>
+
+              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
+                Ajouté
+              </h4>
+              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
+                <li>UI “fundamentals” fonctionnelle.</li>
+                <li>
+                  Menu de customisation du personnage (fonctionnel) + corrections de changement de scènes.
+                </li>
+                <li>Stamina.</li>
+              </ul>
+
+              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
+                Corrigé / Amélioré
+              </h4>
+              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
+                <li>UI du menu.</li>
+                <li>Inventaire.</li>
+                <li>Démarrage (startup panel).</li>
+                <li>Tilemap registry.</li>
+                <li>Coffres : stabilisation des interactions et transferts.</li>
               </ul>
             </div>
           </div>

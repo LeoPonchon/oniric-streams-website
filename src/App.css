@@ -168,6 +168,7 @@
 }
 
 .BrandMark {
+  display: none;
   width: 22px;
   height: 22px;
   border-radius: 6px;
@@ -510,6 +511,50 @@
   gap: 10px;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-top: 14px;
+}
+
+.HeroArt {
+  display: grid;
+  place-items: center;
+  width: min(220px, 32vw);
+  padding: 10px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.HeroArtImg {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 18px 30px rgba(17, 24, 39, 0.14));
+}
+
+.UpdateList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.UpdateItem {
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px dashed rgba(17, 24, 39, 0.16);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.UpdateTitle {
+  font-weight: 950;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.UpdateBody {
+  color: rgba(17, 24, 39, 0.78);
+  line-height: 1.8;
 }
 
 .HeroActions {

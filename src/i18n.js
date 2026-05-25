@@ -71,6 +71,21 @@ const translations = {
       lead: "The people behind Oniric Streams.",
       contributors: "Contributors",
     },
+    changelog: {
+      aria: "Changelog",
+      title: "Changelog",
+    },
+    updates: {
+      aria: "Updates",
+      title: "Updates",
+      lead: "A few concrete notes, so the page feels more like a real project log than a template.",
+      listAria: "Updates list",
+      items: [
+        { title: "Windows build", body: "Public installer available: Oniric Streams_Setup_v1.0.0.exe" },
+        { title: "Scope", body: "Small team, focused on a tight loop: farm → tower → rebirth." },
+        { title: "Feedback", body: "If you spot a bug or have balance thoughts, ping the team on GitHub (links below)." },
+      ],
+    },
   },
   fr: {
     pageTitle: "Oniric Streams — Site officiel",
@@ -143,6 +158,21 @@ const translations = {
       title: "Équipe",
       lead: "Les personnes derrière Oniric Streams.",
       contributors: "Contributeurs",
+    },
+    changelog: {
+      aria: "Changelog",
+      title: "Changelog",
+    },
+    updates: {
+      aria: "Actus",
+      title: "Actus",
+      lead: "Quelques notes concrètes (ça fait tout de suite moins “template”).",
+      listAria: "Liste des actus",
+      items: [
+        { title: "Build Windows", body: "Installer public disponible : Oniric Streams_Setup_v1.0.0.exe" },
+        { title: "Cadre", body: "Petite équipe, focus sur une boucle simple : ferme → tour → rebirth." },
+        { title: "Retours", body: "Bug / équilibrage / ressenti : écris-nous via GitHub (liens en bas)." },
+      ],
     },
   },
 };
