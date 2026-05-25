@@ -198,45 +198,31 @@ export default function HomePage({ lang = "en" }) {
                 UI / Shop
               </h4>
               <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>
-                  Mise à jour des visuels et layouts du shop : <code>shop.png</code>, <code>shop_slot.prefab</code>,{" "}
-                  <code>shop_slot_selector.png</code>.
-                </li>
-                <li>
-                  Ajout de nouveaux sprites : <code>locker.png</code>, <code>name_slot.png</code>,{" "}
-                  <code>normal_slot.png</code>.
-                </li>
-                <li>
-                  Suppression de l’ancien sprite <code>shop_slot.png</code>.
-                </li>
-                <li>
-                  Ajustements de scène liés au shop : <code>Assets/_Project/Scenes/Production/SampleScene.unity</code>.
-                </li>
+                <li>Mise à jour des visuels et des layouts du shop.</li>
+                <li>Nouveaux éléments UI (slots / rangements).</li>
+                <li>Ajustements de scène liés au shop.</li>
               </ul>
 
               <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
                 Ajouté
               </h4>
               <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>Bruitages de pas (footsteps).</li>
-                <li>Panel de paramètres (settings panel).</li>
+                <li>Bruitages de pas.</li>
+                <li>Panneau de paramètres.</li>
               </ul>
 
               <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
                 Corrigé
               </h4>
               <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>UI/typo : font.</li>
-                <li>Interactions : arbres qui réapparaissent + joueur bloqué après certaines interactions.</li>
-                <li>
-                  Sauvegarde/économie : cultures (crops) non sauvegardées, or (gold) qui ne se met pas à jour.
-                </li>
-                <li>Shop : régressions après retour au menu principal / hotbar / menu in-game.</li>
-                <li>Coffres : slots non visibles, transferts joueur ↔ coffre, divers soucis.</li>
-                <li>Chargement du personnage.</li>
-                <li>Lit (bed) et shipping bin.</li>
-                <li>Customisation compatible avec des tilesheets supplémentaires.</li>
-                <li>Animations : idle up (back hair).</li>
+                <li>Polices / typo UI.</li>
+                <li>Interactions bloquantes.</li>
+                <li>Sauvegarde et économie.</li>
+                <li>Stabilité du shop (menus / hotbar).</li>
+                <li>Coffres (affichage + transferts).</li>
+                <li>Chargements et transitions.</li>
+                <li>Customisation.</li>
+                <li>Animations.</li>
               </ul>
 
               <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
@@ -269,9 +255,9 @@ export default function HomePage({ lang = "en" }) {
               <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
                 <li>UI du menu.</li>
                 <li>Inventaire.</li>
-                <li>Démarrage (startup panel).</li>
-                <li>Tilemap registry.</li>
-                <li>Coffres : stabilisation des interactions et transferts.</li>
+                <li>Démarrage.</li>
+                <li>Tilemaps.</li>
+                <li>Coffres.</li>
               </ul>
             </div>
           </div>
