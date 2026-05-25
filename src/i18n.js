@@ -24,6 +24,7 @@ const translations = {
     },
     topCta: {
       aria: "Download",
+      actionsAria: "Actions",
       kicker: "Farm • Tower • Rebirth",
       title: "Oniric Streams",
       lead:
@@ -70,10 +71,43 @@ const translations = {
       title: "Team",
       lead: "The people behind Oniric Streams.",
       contributors: "Contributors",
+      listAria: "Contributors list",
     },
     changelog: {
       aria: "Changelog",
       title: "Changelog",
+      lead: "All notable changes to the project are listed here.",
+      sections: [
+        { heading: "[Unreleased]", blocks: [{ title: null, items: ["Nothing yet."] }] },
+        {
+          heading: "[Since 1.0.0] - 2026-05-23 → 2026-05-25",
+          blocks: [
+            { title: "UI / Shop", items: ["Updated shop visuals and layouts.", "New UI elements.", "Shop scene adjustments."] },
+            { title: "Added", items: ["Footstep SFX.", "Settings panel."] },
+            {
+              title: "Fixed",
+              items: [
+                "UI typography.",
+                "Blocking interactions.",
+                "Save and economy issues.",
+                "Shop stability (menus / hotbar).",
+                "Chests (visibility and transfers).",
+                "Loading and transitions.",
+                "Customization.",
+                "Animations.",
+              ],
+            },
+            { title: "Changed", items: ["Website iterations and move to another repo."] },
+          ],
+        },
+        {
+          heading: "[1.0.0] - 2026-05-23",
+          blocks: [
+            { title: "Added", items: ["Core UI (fundamentals).", "Character customization menu.", "Stamina."] },
+            { title: "Fixed / Improved", items: ["Menu UI.", "Inventory.", "Startup flow.", "Tilemaps.", "Chests."] },
+          ],
+        },
+      ],
     },
     updates: {
       aria: "Updates",
@@ -139,7 +173,7 @@ const translations = {
         "Construis la ferme de tes rêves : cultures, animaux, améliorations, routine cozy.",
         "Explore la Tour : étages, secrets, et boss marquants.",
         "Une progression axée combat : équipement, compétences et builds variés.",
-        "Une boucle satisfaisante : ferme le jour, donjon pour la puissance et les ressources rares.",
+        "Une boucle satisfaisante : cultive, prends le temps d’une vie paisible à la ferme et au village, puis gravis la Tour, là où t’attendent puissance et ressources rares.",
         "Rebirth : recommence plus fort, avec des bonus permanents et de nouveaux indices.",
         "Un village vivant : relations, événements saisonniers et histoires cachées.",
       ],
@@ -158,10 +192,46 @@ const translations = {
       title: "Équipe",
       lead: "Les personnes derrière Oniric Streams.",
       contributors: "Contributeurs",
+      listAria: "Liste des contributeurs",
     },
     changelog: {
       aria: "Changelog",
       title: "Changelog",
+      lead: "Tous les changements notables du projet sont listÃ©s ici.",
+      sections: [
+        { heading: "[Non publiÃ©]", blocks: [{ title: null, items: ["Rien pour le moment."] }] },
+        {
+          heading: "[Depuis 1.0.0] - 2026-05-23 → 2026-05-25",
+          blocks: [
+            {
+              title: "UI / Shop",
+              items: ["Mise Ã  jour des visuels et des layouts du shop.", "Nouveaux Ã©lÃ©ments UI.", "Ajustements de scÃ¨ne liÃ©s au shop."],
+            },
+            { title: "AjoutÃ©", items: ["Bruitages de pas.", "Panneau de paramÃ¨tres."] },
+            {
+              title: "CorrigÃ©",
+              items: [
+                "Polices / typo UI.",
+                "Interactions bloquantes.",
+                "Sauvegarde et Ã©conomie.",
+                "StabilitÃ© du shop (menus / hotbar).",
+                "Coffres (affichage et transferts).",
+                "Chargements et transitions.",
+                "Customisation.",
+                "Animations.",
+              ],
+            },
+            { title: "ModifiÃ©", items: ["Site web : itÃ©rations + dÃ©placement vers un autre repo."] },
+          ],
+        },
+        {
+          heading: "[1.0.0] - 2026-05-23",
+          blocks: [
+            { title: "AjoutÃ©", items: ["UI “fundamentals” fonctionnelle.", "Menu de customisation du personnage.", "Stamina."] },
+            { title: "CorrigÃ© / AmÃ©liorÃ©", items: ["UI du menu.", "Inventaire.", "DÃ©marrage.", "Tilemaps.", "Coffres."] },
+          ],
+        },
+      ],
     },
     updates: {
       aria: "Actus",

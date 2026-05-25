@@ -53,7 +53,7 @@ export default function HomePage({ lang = "en" }) {
               <p className="Lead" style={{ marginTop: 8 }}>
                 {copy.topCta.lead}
               </p>
-              <div className="HomeTopCtaActions" aria-label="Actions" style={{ justifyContent: "flex-start" }}>
+              <div className="HomeTopCtaActions" aria-label={copy.topCta.actionsAria ?? "Actions"} style={{ justifyContent: "flex-start" }}>
                 <a className="Button ButtonPrimary" href={installerHref} download>
                   {copy.topCta.download}
                 </a>
@@ -63,9 +63,6 @@ export default function HomePage({ lang = "en" }) {
               </div>
             </div>
 
-            <div className="HeroArt" aria-hidden="true">
-              <img className="HeroArtImg" src={withPublicUrl("/media/hero-sprite.svg")} alt="" decoding="async" />
-            </div>
           </div>
         </div>
       </section>
@@ -140,7 +137,7 @@ export default function HomePage({ lang = "en" }) {
             <p className="Lead">{copy.credits.lead}</p>
           </div>
 
-          <div className="Card" aria-label="Liste">
+          <div className="Card" aria-label={copy.credits.listAria ?? "List"}>
             <div className="CardInner">
               <h3 className="CardTitle" style={{ marginBottom: 12 }}>
                 {copy.credits.contributors}
@@ -176,89 +173,36 @@ export default function HomePage({ lang = "en" }) {
           <div className="Card" aria-label={copy.changelog.aria}>
             <div className="CardInner">
               <p className="Lead" style={{ marginTop: 0 }}>
-                Tous les changements notables du projet sont listés ici.
+                {copy.changelog.lead}
               </p>
 
               <div className="Divider" />
 
-              <h3 className="CardTitle" style={{ marginBottom: 8 }}>
-                [Non publié]
-              </h3>
-              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>Rien pour le moment.</li>
-              </ul>
+              {(copy.changelog.sections ?? []).map((section) => (
+                <div key={section.heading}>
+                  <h3 className="CardTitle" style={{ marginBottom: 8 }}>
+                    {section.heading}
+                  </h3>
 
-              <div className="Divider" />
+                  {(section.blocks ?? []).map((block, idx) => (
+                    <div key={`${section.heading}-${idx}`}>
+                      {block.title ? (
+                        <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
+                          {block.title}
+                        </h4>
+                      ) : null}
 
-              <h3 className="CardTitle" style={{ marginBottom: 8 }}>
-                [Depuis 1.0.0] - 2026-05-23 → 2026-05-25
-              </h3>
+                      <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
+                        {(block.items ?? []).map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
 
-              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
-                UI / Shop
-              </h4>
-              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>Mise à jour des visuels et des layouts du shop.</li>
-                <li>Nouveaux éléments UI (slots / rangements).</li>
-                <li>Ajustements de scène liés au shop.</li>
-              </ul>
-
-              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
-                Ajouté
-              </h4>
-              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>Bruitages de pas.</li>
-                <li>Panneau de paramètres.</li>
-              </ul>
-
-              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
-                Corrigé
-              </h4>
-              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>Polices / typo UI.</li>
-                <li>Interactions bloquantes.</li>
-                <li>Sauvegarde et économie.</li>
-                <li>Stabilité du shop (menus / hotbar).</li>
-                <li>Coffres (affichage + transferts).</li>
-                <li>Chargements et transitions.</li>
-                <li>Customisation.</li>
-                <li>Animations.</li>
-              </ul>
-
-              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
-                Modifié
-              </h4>
-              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>Site web : itérations + déplacement vers un autre repo.</li>
-              </ul>
-
-              <div className="Divider" />
-
-              <h3 className="CardTitle" style={{ marginBottom: 8 }}>
-                [1.0.0] - 2026-05-23
-              </h3>
-
-              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
-                Ajouté
-              </h4>
-              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>UI “fundamentals” fonctionnelle.</li>
-                <li>
-                  Menu de customisation du personnage (fonctionnel) + corrections de changement de scènes.
-                </li>
-                <li>Stamina.</li>
-              </ul>
-
-              <h4 className="CardTitle" style={{ marginTop: 14, marginBottom: 6, fontSize: 16 }}>
-                Corrigé / Amélioré
-              </h4>
-              <ul style={{ marginTop: 0, paddingLeft: 18, color: "rgba(43, 33, 48, 0.86)" }}>
-                <li>UI du menu.</li>
-                <li>Inventaire.</li>
-                <li>Démarrage.</li>
-                <li>Tilemaps.</li>
-                <li>Coffres.</li>
-              </ul>
+                  <div className="Divider" />
+                </div>
+              ))}
             </div>
           </div>
         </div>
