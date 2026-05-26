@@ -80,6 +80,19 @@ const translations = {
       sections: [
         { heading: "[Unreleased]", blocks: [{ title: null, items: ["Nothing yet."] }] },
         {
+          heading: "[1.0.3] - 2026-05-26",
+          blocks: [
+            {
+              title: "Interactions (quality of life)",
+              items: [
+                "Chests no longer open automatically: you must now aim at the chest and press Interact.",
+                "The bed, Shipping Bin, and vendors also use Interact on the targeted object (no more invisible “zones”).",
+                "To sleep, you must be on the bed (not just next to it).",
+              ],
+            },
+          ],
+        },
+        {
           heading: "[1.0.2] - 2026-05-25",
           blocks: [
             {
@@ -223,6 +236,19 @@ const translations = {
       lead: "Tous les changements notables du projet sont listés ici.",
       sections: [
         { heading: "[Non publié]", blocks: [{ title: null, items: ["Rien pour le moment."] }] },
+        {
+          heading: "[1.0.3] - 2026-05-26",
+          blocks: [
+            {
+              title: "Interactions (qualité de vie)",
+              items: [
+                "Les coffres ne s’ouvrent plus automatiquement : il faut désormais viser le coffre et appuyer sur Interagir.",
+                "Le lit, la Shipping Bin et les vendeurs s’utilisent aussi via Interagir sur l’objet visé (plus besoin de se coller à une “zone” invisible).",
+                "Pour dormir, il faut être sur le lit (pas juste à côté).",
+              ],
+            },
+          ],
+        },
         {
           heading: "[1.0.2] - 2026-05-25",
           blocks: [
