@@ -182,10 +182,10 @@ const translations = {
     },
     topCta: {
       aria: "Téléchargement",
-      kicker: "Ferme • Tour • Rebirth",
+      kicker: "Ferme • Tour • Renaissance",
       title: "Oniric Streams",
       lead:
-        "Fais grandir ta ferme et grimpe la tour au centre du village. À chaque cycle, les Flux Oniriques te ramènent au début… avec quelque chose en plus.",
+        "Quitte l’Ordre des Veilleurs, reconstruis la ferme de tes parents et gravis la Tour où ils ont disparu. Cultive le jour, combats la nuit, meurs, renais, et découvre ce que les Flux Oniriques ont enfoui au sommet.",
       download: "Télécharger",
       seeShots: "Voir des captures",
     },
@@ -193,25 +193,26 @@ const translations = {
       aria: "Présentation",
       aboutTitle: "À propos",
       aboutLead:
-        "Oniric Streams est un jeu de ferme en pixel art, avec un accent plus marqué sur le combat. Au centre du village se dresse une tour impossible : tes parents y ont trouvé la mort, et tu hérites de leur ferme une fois assez grand pour la relever.",
+        "Oniric Streams est un farming roguelite narratif en pixel art, situé dans un monde médiéval-fantastique traversé par une magie ancienne : les Flux Oniriques. Le jour, tu reconstruis la ferme familiale et fais revivre le domaine. La nuit, tu gravis la Tour où tes parents ont disparu.",
       storyTitle: "Histoire",
       storyLead:
-        "Orphelin au bord d’un village paisible, tu récupères la ferme de tes parents, disparus dans la tour au centre des terres. À mesure que ton domaine reprend vie, tu grimpes dans les courants oniriques de la tour, à la recherche de ce qu’ils ont laissé derrière eux. Au sommet, un vœu t’attend… mais chaque chute te renvoie au début, un peu différent.",
+        "Tu as grandi dans la capitale, recueilli par l’Ordre des Veilleurs après la disparition de tes parents. On t’a appris à copier des sceaux et à canaliser les rêves des autres. Mais lorsque le sceau qu’ils t’avaient laissé se brise, leur dernier appel traverse ton sommeil. Tu retournes au village, à une ferme envahie par les herbes et les souvenirs. À mesure que ton domaine reprend vie, les Flux Oniriques se réveillent… et la Tour ouvre de nouveaux étages. Chaque défaite te renvoie au premier jour — pas exactement le même premier jour.",
       credits: "Crédits",
       pressKit: "Press kit",
     },
     features: {
       aria: "Fonctionnalités",
       title: "Fonctionnalités",
-      lead: "Un aperçu du ton et des piliers du jeu.",
+      lead: "Les piliers du jeu, entre douceur et vertige.",
       listAria: "Liste des fonctionnalités",
       items: [
-        "Construis la ferme de tes rêves : cultures, animaux, améliorations, routine cozy.",
-        "Explore la Tour : étages, secrets, et boss marquants.",
-        "Une progression axée combat : équipement, compétences et builds variés.",
-        "Une boucle satisfaisante : cultive, prends le temps d’une vie paisible à la ferme et au village, puis gravis la Tour, là où t’attendent puissance et ressources rares.",
-        "Rebirth : recommence plus fort, avec des bonus permanents et de nouveaux indices.",
-        "Un village vivant : relations, événements saisonniers et histoires cachées.",
+        "Reconstruis une ferme héritée d’une lignée magique : cultive, récolte, élève des animaux, restaure ton domaine et transforme une terre abandonnée en refuge vivant.",
+        "Prépare chaque ascension : récoltes, outils, améliorations et liens avec le village influencent ta progression dans la Tour.",
+        "Gravis la Tour impossible : étages instables, secrets, créatures oniriques et boss marquants.",
+        "Meurs, renais, transforme le monde : chaque chute te ramène au début du cycle avec de nouvelles forces, de nouveaux indices et des traces durables.",
+        "Maîtrise les Flux Oniriques : magie des rêves, des saisons et des souvenirs pour composer des builds variés.",
+        "Découvre un village qui cache ses propres rêves : relations, événements saisonniers et histoires enfouies.",
+        "Vis une boucle entre douceur et vertige : une vie simple le jour, puis la Tour la nuit.",
       ],
     },
     media: {
