@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Oniric Streams — site officiel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Site web de présentation et de distribution du projet **Oniric Streams**.
 
-## Available Scripts
+L'application React rassemble les pages de présentation du jeu, des médias/captures, la localisation de l'interface et le téléchargement de l'installeur Windows actuellement versionné dans le dépôt.
 
-In the project directory, you can run:
+## Fonctionnalités
 
-### `npm start`
+- site de présentation du jeu ;
+- galerie de médias/captures ;
+- contenu multilingue via `i18n` ;
+- navigation React ;
+- téléchargement de l'installeur Windows ;
+- contenu autour de fonctionnalités du jeu comme la ferme, la personnalisation, la boutique, le sommeil et les coffres.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 19
+- React Router
+- Create React App / `react-scripts`
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/LeoPonchon/oniric-streams-website.git
+cd oniric-streams-website
+npm install
+npm start
+```
 
-### `npm run build`
+Le serveur de développement affiche l'URL locale au démarrage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Build de production
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm run build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Le résultat est généré dans `build/`.
 
-### `npm run eject`
+## Distribution du jeu
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Le dossier public contient actuellement un installeur Windows `Oniric Streams_Setup_v1.0.0.exe`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Lors d'une nouvelle release, pensez à mettre à jour ensemble :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- le binaire distribué ;
+- le numéro de version affiché sur le site ;
+- les captures d'écran si l'interface du jeu évolue ;
+- les traductions concernées.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Projet associé
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Le code Unity du jeu se trouve dans le dépôt `Oniric-Streams`.
